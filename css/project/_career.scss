@@ -1,0 +1,102 @@
+@use "../setting/setting";
+
+.p-career{
+  padding: 0 0 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.p-career__item{
+  position: relative;
+  margin-top: 40px;
+}
+
+.p-career__heading{
+  line-height: 1.25;
+  color: setting.$color-blue;
+
+  span{
+    font-family: setting.$font-english;
+    font-size: 36px;
+    letter-spacing: 4px;
+  }
+
+  h2{
+    font-size: 18px;
+  }
+}
+
+.p-career__contents{
+  background: setting.$color-sub;
+  padding: 20px;
+  margin-top: 16px;
+  border-radius: 10px;
+  position: relative;
+  text-align: justify;
+}
+
+
+.p-career__button{
+  margin-top: 24px;
+
+  a{
+    font-weight: bold;
+    display: block;
+    position: relative;
+    text-align: right;
+    padding-right: 40px;
+    transition: all 0.2s;
+
+    &:after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      background: url('../images/career/button-career.png') no-repeat;
+      background-size:cover;   
+      height: 32px;
+      width: 32px;
+    }
+
+    &:hover{
+          transform: scale(1.05);
+    }
+
+  }
+}
+
+
+@media (min-width: 768px){
+  .p-career__items{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .p-career__item{
+    width: 45%;
+  }
+}
+
+@media (min-width: 1024px){
+  .p-career{
+    padding: 24px 0 128px;
+  }
+  
+
+  .p-career__heading{
+    span{
+      font-size: 44px;
+    }
+
+    h2{
+      font-size: 20px;
+    }
+  }
+
+  .p-career__contents{
+    padding: 24px;
+    font-size: 18px;
+  }
+}

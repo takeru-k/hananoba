@@ -1,0 +1,54 @@
+@use "../setting/setting";
+.c-ctaTrial{
+  padding: 40px 0;
+}
+
+.c-ctaTrial__heading{
+  span{
+    font-family: setting.$font-english;
+    display: block;
+    text-align: center;
+    text-transform: capitalize;
+    color: #F5A2CB;
+  }
+
+  h2{
+    position: relative;
+    text-align: center;
+    font-size: 24px;
+  }  
+}
+
+
+.c-ctaTrial__texts{
+  margin-top: 16px;
+  text-align: center;
+
+  p{
+    margin-top: 12px;
+  }
+}
+
+
+
+@media (min-width: 1024px){
+  .c-ctaTrial{
+    padding: 64px 0;
+  }
+  .c-ctaTrial__heading{
+    span{
+      font-size: 20px;
+    }
+
+    h2{
+      font-size: 36px;
+    }
+  }
+
+  .c-ctaTrial__texts{
+    margin-top: 36px;
+    p{
+      font-size: 18px;
+    }
+  }
+}

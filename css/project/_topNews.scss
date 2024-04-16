@@ -1,0 +1,20 @@
+@use "../setting/setting";
+
+.p-topNews{
+  background: setting.$color-sub;
+  padding: 40px 0;
+}
+
+.p-topNews__contents{
+  margin-top: 24px;
+}
+
+@media (min-width: 1024px){
+  .p-topNews{
+    padding: 64px 0;
+  }
+
+  .p-topNews__contents{
+    margin-top: 32px;
+  }
+}

@@ -1,0 +1,30 @@
+@use "../setting/setting";
+
+.p-topAbout{
+  padding: 40px 0;
+}
+
+.p-topAbout__texts{
+  margin-top: 16px;
+
+  p{
+    margin-top: 8px;
+  }
+}
+
+@media (min-width: 768px){
+  .p-topAbout{
+    padding: 64px 0;
+  }
+
+  .p-topAbout__texts{
+    text-align: center;
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: 1024px){
+  .p-topAbout__texts{
+    font-size: 18px;
+  }
+}

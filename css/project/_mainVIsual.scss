@@ -1,0 +1,49 @@
+@use "../setting/setting";
+
+.p-mainVisual{
+  background-color: setting.$color-sub;
+  background-image: url(../images/top/mv-sp.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 74vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-mainVisual__copy{
+  text-align: center;
+
+  h1{
+    text-transform: uppercase;
+    color: setting.$color-main;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (min-width: 768px){
+  .p-mainVisual{
+    background-image: url(../images/top/mv.png);
+  }
+}
+
+@media (min-width: 1024px){
+  .p-mainVisual{
+    height: 84vh;
+  }
+
+  .p-mainVisual__copy{
+    p{
+      font-size: 24px;
+    }
+
+    h1{
+      font-size: 64px;
+    }
+  }
+}

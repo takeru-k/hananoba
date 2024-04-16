@@ -1,0 +1,42 @@
+@use "../setting/setting";
+
+.l-pageHeader{
+  text-align: center;
+  padding: 24px 0;
+  border-bottom: 1px solid #DADADA;
+
+  span{
+    text-transform: capitalize;
+  }
+  h1{
+    font-size: 20px;
+  }
+}
+
+.l-pageHeader__blue{
+  color: setting.$color-blue;
+}
+
+.l-pageHeader__green{
+  color: setting.$color-green;
+}
+
+.l-pageHeader__orange{
+  color: setting.$color-orange;
+}
+
+.l-pageHeader__pink{
+  color: setting.$color-main;
+}
+
+@media (min-width: 1024px){
+  .l-pageHeader{
+    padding: 36px 0;
+    span{
+      font-size: 20px;
+    }
+    h1{
+      font-size: 36px;
+    }
+  }
+}

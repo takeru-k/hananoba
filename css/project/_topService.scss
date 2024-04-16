@@ -1,0 +1,186 @@
+@use "../setting/setting";
+@use "../setting/mixin";
+
+.p-topService{
+  padding: 40px 0;
+}
+
+.p-topService__item{
+  position: relative;
+  margin-top: 40px;
+}
+
+.p-topService__heading{
+  line-height: 1.25;
+
+  span{
+    font-family: setting.$font-english;
+    font-size: 36px;
+    letter-spacing: 4px;
+  }
+
+  h3{
+    font-size: 18px;
+  }
+}
+
+.p-topService__heading-blue{
+  color: #2B91D2;
+}
+
+.p-topService__heading-green{
+  color: #00AA8C;
+}
+
+.p-topService__heading-orange{
+  color: #FF8B35;
+}
+
+
+.p-topService__contents{
+  background: setting.$color-sub;
+  padding: 20px;
+  margin-top: 16px;
+  border-radius: 10px;
+  position: relative;
+
+  h4{
+    position: relative;
+    padding-bottom: 8px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 80px;
+      background: #ddd;
+    }
+  }
+
+  p{
+    margin-top: 16px;
+  }
+}
+
+.p-topService__item-career{
+  position: relative;
+
+  &::after {
+    @include mixin.topService-image;
+    background: url('../images/top/service01.png') no-repeat center center/contain;  
+  }
+}
+
+.p-topService__item-study{
+  position: relative;
+
+  &::after {
+    @include mixin.topService-image;
+    background: url('../images/top/service02.png') no-repeat center center/contain; 
+  }
+}
+
+.p-topService__item-family{
+  position: relative;
+
+  &::after {
+    @include mixin.topService-image;
+    background: url('../images/top/service03.png') no-repeat center center/contain; 
+  }
+}
+
+.p-topService__button{
+  margin-top: 24px;
+
+  a{
+    font-weight: bold;
+    display: block;
+    position: relative;
+    text-align: right;
+    padding-right: 40px;
+
+    &:hover{
+      transform: scale(1.05);
+      text-decoration: underline;
+    }
+
+  }
+}
+
+.p-topService__button-blue{
+  a{
+    position: relative;
+    /* 矢印 */
+    &:after{
+      @include mixin.topService-button;
+      background: url('../images/common/arrow-button-blue.svg') no-repeat center center/contain; 
+
+    }
+  }
+}
+.p-topService__button-green{
+  a{
+    position: relative;
+    /* 矢印 */
+    &:after{
+      @include mixin.topService-button;
+      background: url('../images/common/arrow-button-green.svg') no-repeat center center/contain; 
+    }
+  }
+}
+.p-topService__button-orange{
+  a{
+    position: relative;
+    /* 矢印 */
+    &:after{
+      @include mixin.topService-button;
+      background: url('../images/common/arrow-button-orange.svg') no-repeat center center/contain; 
+    }
+  }
+}
+
+@media (min-width: 768px){
+  .p-topService__items{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .p-topService__item{
+    width: 48%;
+  }
+}
+
+@media (min-width: 1024px){
+  .p-topService{
+    padding-bottom: 64px;
+  }
+  
+  .p-topService__item{
+    width: 30%;
+  }
+
+  .p-topService__heading{
+    span{
+      font-size: 44px;
+    }
+
+    h3{
+      font-size: 20px;
+    }
+  }
+
+  .p-topService__contents{
+    padding: 24px;
+
+    h4{
+      font-size: 18px;
+    }
+
+    p{
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,155 @@
+@use "../setting/setting";
+
+.c-chart{
+  padding: 32px 0;
+}
+
+.c-chart table{
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+
+  th{
+    text-align: left;   
+
+    span{
+      font-size: 14px;
+    }
+  }
+
+  td{
+    span{
+      font-size: 14px;
+      padding-left: 24px;
+    }
+  }
+
+  li{
+    margin-bottom: 16px;
+  }
+
+  a{
+    font-weight: bold;
+    color: setting.$color-link;
+  }
+}
+
+@media not all and (min-width: 1024px){
+  .c-chart{
+
+    tr{
+      border-top: 1px solid #eaeaea;
+      border-bottom: 1px solid #eaeaea;
+      }
+
+    th{
+      display: block;
+      padding: 20px 12px 8px;
+      font-size: 18px;
+
+      br{
+        display: none;
+      }
+        
+    }
+
+    td{
+      display: block;
+      padding: 8px 0 20px 12px;
+    }
+  }
+} 
+
+
+
+@media (min-width: 1024px){
+  .c-chart table{
+
+    th{
+      padding: 24px;
+      background: setting.$color-sub;
+      border-top: 1px solid #eaeaea;
+      border-bottom: 1px solid #eaeaea;
+      border-left: 1px solid #eaeaea;
+      width: 160px;
+      vertical-align: top;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    td{
+      padding: 24px 24px 24px 40px;
+      border-top: 1px solid #eaeaea;
+      border-bottom: 1px solid #eaeaea;
+      border-right: 1px solid #eaeaea;
+      font-size: 18px;
+    }
+
+    li{
+      margin-bottom: 16px;
+    }
+
+    li{
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.c-chart__list{
+  li{
+    position: relative;
+    padding-left: 12px;
+    margin-top: 4px;
+
+    &:before{
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      transform: translateY(-50%);
+      content: "";
+      width: 4px;
+      height: 4px;
+      margin-right: 8px;
+      display: inline-block;
+      background-color: #333;
+      border-radius: 50%;
+    }
+    
+  }
+}
+
+.c-chart__note{
+  font-size: 14px;
+  text-align: right;
+  max-width: 720px;
+  margin: 8px auto 0;
+}
+
+.c-chart__texts{
+  max-width: 720px;
+  margin: 8px auto 0;
+
+  h3{
+    font-size: 18px;
+  }
+
+  p{
+    margin-top: 8px;
+  }
+}
+
+@media (min-width: 1024px){
+  .c-chart__texts{
+
+    h3{
+      font-size: 20px;
+    }
+
+    p{
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@use "../setting/setting";
+.c-section{
+  padding: 40px 0;
+}
+
+.c-section + .c-section{
+  padding-top: 0;
+}
+
+.c-section__heading{
+  span{
+    font-family: setting.$font-english;
+    display: block;
+    text-align: center;
+    color: setting.$color-main;
+    text-transform: capitalize;
+  }
+
+  h2{
+    position: relative;
+    text-align: center;
+    font-size: 24px;
+  }  
+}
+
+.c-section__heading-blue{
+  span{
+    color: setting.$color-blue;
+  }
+}
+
+.c-section__heading-green{
+  span{
+    color: setting.$color-green;
+  }
+}
+
+.c-section__heading-orange{
+  span{
+    color: setting.$color-orange;
+  }
+}
+
+@media (min-width: 1024px){
+  .c-section{
+    padding: 88px 0;
+  }
+
+  .c-section__heading{
+    span{
+      font-size: 20px;
+    }
+
+    h2{
+      font-size: 36px;
+    }
+  }
+}

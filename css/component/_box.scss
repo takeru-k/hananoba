@@ -1,0 +1,68 @@
+@use "../setting/setting";
+
+.c-box{
+  background: setting.$color-sub;
+  padding: 40px 0;
+}
+
+.c-box__wrapper{
+  background: #fff;
+  border-radius: 10px;
+  padding:24px 12px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.c-box__contents{
+  padding: 0 16px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.c-box__texts{
+  margin-top: 16px;
+
+  ul{
+    margin: 16px 0;
+  }
+
+  li{
+    padding-left: 1em;
+    text-indent: -1em;
+    margin-bottom: 8px;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: setting.$color-green;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-right: .5em;
+      margin-top: -4px;
+    }
+  }
+}
+
+@media (min-width: 1024px){
+  .c-box{
+    padding: 88px 0;
+  }
+
+  .c-box__wrapper{
+    padding: 40px 0;
+  }
+
+  .c-box__contents{
+    padding: 20px 32px;
+  }
+
+  .c-box__texts{
+    font-size: 18px;
+
+    ul{
+      margin: 32px 0;
+    }
+  }
+}

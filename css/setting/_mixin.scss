@@ -1,0 +1,20 @@
+/*================================
+	mixin
+=================================*/
+@mixin topService-image{
+  content: '';
+  position: absolute;
+  top: 4%;
+  right: 2%;
+  width: 100px;
+  height: 100px;
+}
+
+@mixin topService-button{
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: 0;
+  height: 32px;
+  width: 32px;
+}
